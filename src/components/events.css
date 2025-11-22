@@ -1,0 +1,176 @@
+.events {
+    padding: var(--main-padding);
+}
+.events .container form {
+    background-color: var(--alt-bg-color);
+}
+.events .container .info .time .unit span
+ {
+    display: block;
+}
+.events .container .info {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.events .container .info .time {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+}
+.events .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+.events .container img {
+    margin: 0 auto;
+}
+.events .container .info .time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0.2rem auto;
+    width: fit-content;
+}
+.events .container .info .time .unit {
+    text-align: center;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    border: 0.01rem solid #77777773;
+    border-radius: 0.3rem;
+}
+.events .container .info .time .unit span:first-of-type {
+    font-size: 1.3rem;
+    padding: 0 0 0.2rem;
+    color: var(--main-color);
+}
+.events .container .info .time .unit span:nth-of-type(2) {
+    padding: 0.2rem 0 0;
+    font-size: 0.5rem;
+    color: var(--text-color);
+}
+.events .container .info h2 {
+    color: var(--text-color);
+}
+.events .container .info p {
+    line-height: 1.7;
+    color: var(--text-color);
+    font-size: 0.6rem;
+}
+.events .container form {
+    width: 100%;
+    border-radius: 0.7rem;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0.5rem auto;
+}
+.events .container form input {
+    width: 12rem;
+    text-align: center;
+    border-radius: 0.7rem;
+    height: 1.5rem;
+}
+.events .container form input[type="email"] {
+    caret-color: var(--main-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.events .container form input[type="email"]::-webkit-input-placeholder {
+    color: rgba(255, 0, 0, 0.4);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.events .container form input[type="email"]::-moz-placeholder {
+    color: rgba(255, 0, 0, 0.4);
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+}
+.events .container form input[type="email"]:-ms-input-placeholder {
+    color: rgba(255, 0, 0, 0.4);
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+}
+.events .container form input[type="email"]::-ms-input-placeholder {
+    color: rgba(255, 0, 0, 0.4);
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+}
+.events .container form input[type="email"]::placeholder {
+    color: rgba(255, 0, 0, 0.4);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.events .container form input[type="email"]:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+.events .container form input[type="email"]:focus::-moz-placeholder {
+    opacity: 0;
+}
+.events .container form input[type="email"]:focus:-ms-input-placeholder {
+    opacity: 0;
+}
+.events .container form input[type="email"]:focus::-ms-input-placeholder {
+    opacity: 0;
+}
+.events .container form input[type="email"]:focus::placeholder {
+    opacity: 0;
+}
+.events .container form button {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 0.3rem;
+    border-radius: 0.8rem;
+    border: 0 solid var(--main-color);
+    cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+    .events .container .info h2
+    {
+        font-size: 0.8rem;
+    }
+     .events .container form {
+        font-size: 0.6rem;
+    }
+
+ 
+    .events .container img {
+        width: 100%;
+    }
+     .events .container .info p {
+        font-size: 0.5rem;
+    }
+    .events .container form input {
+        width: 100%;
+        padding: 0.3rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.7rem;
+        height: 1.3rem;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+    .events .container img {
+        width: 100%;
+    }
+   
+    .events .container form input {
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem;
+    }
+}
+@media screen and (min-width: 1024px) {
+    
+    .events .container form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}

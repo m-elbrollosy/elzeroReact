@@ -1,0 +1,191 @@
+.discount .form .content form{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+.discount .img {
+    background-size: cover;
+    position: relative;
+}
+.discount .img::before {
+    width: 100%;
+    height: 100%;
+}
+
+.discount,
+.discount .form .content form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+}
+.discount {
+    padding: var(--main-color);
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.discount h3 {
+    padding: 0 0.3rem;
+    color: var(--text-color);
+}
+.discount .img .content,
+.discount .img .content h3 {
+    color: var(--bg-color);
+}
+.discount .content {
+    text-align: center;
+}
+.discount .content {
+    text-align: center;
+}
+.discount .img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgb(255 255 255 / 70%);
+}
+.discount .img {
+    width: 50%;
+    z-index: 1;
+    -webkit-animation: 6s linear infinite changeBG;
+    animation: 6s linear infinite changeBG;
+}
+.discount .img .content p {
+    font-size: 0.5rem;
+    line-height: 1.6;
+    padding: 0.1rem;
+}
+.discount .img .content img {
+    max-width: 100%;
+    width: 55%;
+}
+.discount .form {
+    width: 50%;
+}
+.discount .form .content form {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.discount .form .content form input,
+.discount .form .content form textarea {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    outline: 0;
+    caret-color: var(--main-color);
+    width: 75%;
+    margin: 0.2rem;
+    border: none;
+    border-bottom: 0.08rem solid var(--text-color);
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+}
+.discount .form .content form textarea {
+    resize: none;
+    height: 5rem;
+}
+.discount .form .content form input::-webkit-input-placeholder,
+.discount .form .content form textarea::-webkit-input-placeholder {
+    font-size: 0.7rem;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+}
+.discount .form .content form input::-moz-placeholder,
+.discount .form .content form textarea::-moz-placeholder {
+    font-size: 0.7rem;
+    -moz-transition: 0.7s;
+    transition: 0.7s;
+}
+.discount .form .content form input:-ms-input-placeholder,
+.discount .form .content form textarea:-ms-input-placeholder {
+    font-size: 0.7rem;
+    -ms-transition: 0.7s;
+    transition: 0.7s;
+}
+.discount .form .content form input::-ms-input-placeholder,
+.discount .form .content form textarea::-ms-input-placeholder {
+    font-size: 0.7rem;
+    -ms-transition: 0.7s;
+    transition: 0.7s;
+}
+.discount .form .content form input::placeholder,
+.discount .form .content form textarea::placeholder {
+    font-size: 0.7rem;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+.discount .form .content form input:focus::-webkit-input-placeholder,
+.discount .form .content form textarea:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+.discount .form .content form input:focus::-moz-placeholder,
+.discount .form .content form textarea:focus::-moz-placeholder {
+    opacity: 0;
+}
+.discount .form .content form input:focus:-ms-input-placeholder,
+.discount .form .content form textarea:focus:-ms-input-placeholder {
+    opacity: 0;
+}
+.discount .form .content form input:focus::-ms-input-placeholder,
+.discount .form .content form textarea:focus::-ms-input-placeholder {
+    opacity: 0;
+}
+.discount .form .content form input:focus::placeholder,
+.discount .form .content form textarea:focus::placeholder {
+    opacity: 0;
+}
+.discount .form .content form button {
+    padding: 0.3rem;
+    width: 35%;
+    margin: 0.3rem;
+    color: var(--main-color);
+    border: 0.1rem solid var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+.discount .form .content form button:hover {
+    color: var(--main-color);
+    background-color: var(--main-color);
+    color: #fff;
+}
+@media screen and (max-width: 480px) {
+    .discount .form,
+    .discount .img {
+        width: 100%;
+    }
+     .discount {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+     .discount {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .discount .form,
+    .discount .img {
+        width: 80%;
+    }
+}

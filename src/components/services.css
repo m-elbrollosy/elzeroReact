@@ -1,0 +1,153 @@
+.services .container .box .info a,
+.services .container .box:hover h3 {
+    color: var(--main-color);
+}
+.services {
+    background-color: var(--alt-bg-color);
+}
+.services .container .box:hover::before {
+    width: 100%;
+}
+.services .container .box .info::before {
+    display: -webkit-box;
+    display: -ms-flexbox;
+}
+.services .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr) [3];
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.services .container .box h3 {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+}
+
+
+.services .container .box {
+    -webkit-box-shadow: 0 0 0.3rem 0.2rem #00000080;
+    box-shadow: 0 0 0.3rem 0.2rem #00000080;
+    background-color: var(--alt-bg-color);
+}
+
+
+.services,
+.services .container {
+    padding: var(--main-padding);
+}
+.services .container {
+    gap: 1rem;
+}
+.services .container .box::before {
+    content: "";
+    position: absolute;
+    top: -0.1rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 0.2rem;
+    width: 0;
+    background-color: var(--main-color);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.services .container .box {
+    position: relative;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    counter-increment: mycount;
+}
+.services .container .box:hover {
+    -webkit-transform: translateY(-0.5rem);
+    -ms-transform: translateY(-0.5rem);
+    transform: translateY(-0.5rem);
+}
+.services .container .box i {
+    -webkit-filter: drop-shadow(0 0 0 rgb(2, 200, 255));
+    filter: drop-shadow(0 0 0 rgb(2, 200, 255));
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+    display: block;
+    margin: 0.5rem auto;
+    text-align: center;
+    color: var(--alt-text-color);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    opacity: 0.25;
+}
+.services .container .box:hover i {
+    -webkit-filter: drop-shadow(3px 5px 7px rgb(2, 200, 255));
+    filter: drop-shadow(3px 5px 7px rgb(2, 200, 255));
+    text-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+    color: var(--text-color);
+    opacity: 1;
+}
+.services .container .box h3 {
+    color: var(--text-color);
+    width: fit-content;
+    margin: 0.2rem auto;
+}
+.services .container .box .info::before {
+    content: "0" counter(mycount);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3rem;
+    color: var(--alt-bg-color);
+    background-color: var(--main-color);
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.services .container .box .info {
+    padding: 0.3rem;
+    background-color: var(--bg-color);
+    text-align: right;
+    position: relative;
+}
+.services .container .box .info::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 2.5rem;
+    height: 100.1%;
+    width: 2rem;
+    -webkit-transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+    background-color: #b6ccdd;
+}
+@media screen and (max-width: 480px) {
+     .services .container {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+}
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+    .services .container {
+        -ms-grid-columns: 1fr 0.5rem 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+       .services .container {
+        gap: 0.5rem;
+    }
+    .services .container .box .info::before {
+        width: 2.5rem;
+    }
+    .services .container .box .info::after {
+        left: 2rem;
+        width: 1.5rem;
+    }
+}

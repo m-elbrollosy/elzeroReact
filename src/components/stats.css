@@ -1,0 +1,87 @@
+.stats .container {
+    background-size: cover;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+}
+.stats {
+    padding: var(--main-padding);
+}
+.stats h2 {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    color: var(--text-color);
+    margin: 0.5rem auto 1rem;
+    width: fit-content;
+}
+.stats .container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.stats .container {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-image: url("../imgs/tab-dark-moon.webp");
+}
+.stats .container .box::after,
+.stats .container .box::before {
+    content: "";
+    position: absolute;
+    width: 0.1rem;
+    height: 0;
+    background-color: var(--main-color);
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+.stats .container .box::before {
+    top: 0;
+    left: 0;
+}
+.stats .container .box {
+    position: relative;
+    margin: 0.3rem;
+    padding: 0.3rem 0.4rem;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+.stats .container .box::after {
+    bottom: 0;
+    right: 0;
+}
+.stats .container .box:hover::after,
+.stats .container .box:hover::before {
+    height: 100%;
+}
+.stats .container .box i {
+    font-size: 0.6rem;
+}
+.stats .container .box h3 {
+    font-size: 1rem;
+    margin: 0.2rem;
+}
+.stats .container .box span {
+    font-size: 0.5rem;
+    color: var(--main-color);
+}
+@media screen and (max-width: 480px) {
+
+    .stats .container {
+           -webkit-box-orient: vertical;
+           -webkit-box-direction: normal;
+           -ms-flex-direction: column;
+           flex-direction: column;
+       }
+}
+

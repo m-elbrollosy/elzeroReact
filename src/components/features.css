@@ -1,0 +1,172 @@
+.features .container .box h2 {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    color: var(--text-color);
+}
+.features {
+    margin: 1rem 0;
+}
+.features .container .img-holder::before {
+    top: 0;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    content: "";
+}
+.features .container .img-holder {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 0.5rem 1fr 0.5rem 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+}
+.features .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+}
+.features {
+    position: relative;
+}
+.features .container {
+    display: flex;
+    gap: 1.5rem;
+}
+.features .container .box {
+    border: 1px solid var(--alt-bg-color);
+    text-align: center;
+}
+.features .container .img-holder::before {
+    left: 0;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.features .container .quality:hover .img-holder::before {
+    background-color: rgba(255, 0, 0, 0.25);
+}
+.features .container .time:hover .img-holder::before {
+    background-color: rgba(0, 128, 0, 0.25);
+}
+.features .container .passion:hover .img-holder::before {
+    background-color: rgba(0, 0, 255, 0.25);
+}
+.features .container .img-holder::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 0 0 6rem 20rem;
+    border-color: transparent transparent #fff;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.features .container .box:hover .img-holder::after {
+    border-width: 0 17rem 4rem 0;
+}
+.features .container .img-holder img {
+    max-width: 100%;
+    width: 100%;
+    height: 340px;
+}
+.features .container .box h2 {
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+}
+.features .container .box a {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+}
+.features .container .box h2::after {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: 15%;
+    height: 0.15rem;
+    width: 70%;
+}
+.features .quality h2::after {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+.features .time h2::after {
+    background-color: rgba(0, 128, 0, 0.5);
+}
+.features .passion h2::after {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.features .container .box p {
+    color: var(--text-color);
+    text-align: start;
+    font-size: 0.6rem;
+    padding: 0.5rem;
+    margin: 0.3rem 0;
+    line-height: 2;
+}
+.features .container .box a {
+    border: 0.1rem solid;
+    width: fit-content;
+    margin: 0 auto 1rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.4rem;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+.features .container .box a:hover {
+    color: #fff;
+    border-color: transparent;
+}
+.features .container .quality a {
+    border-color: red;
+    color: red;
+}
+.features .container .time a {
+    border-color: green;
+    color: green;
+}
+.features .container .passion a {
+    border-color: #00f;
+    color: #00f;
+}
+.features .container .quality a:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+.features .container .time a:hover {
+    background-color: rgba(0, 128, 0, 0.7);
+}
+.features .container .passion a:hover {
+    background-color: rgba(0, 0, 255, 0.7);
+}
+@media screen and (max-width: 480px) {
+       .features .container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+}
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+     .features .container {
+        gap: 1rem;
+    }
+    .features .container .img-holder::after {
+        border-width: 0 0 6rem 13rem;
+    }
+    .features .container .box h2 {
+        font-size: 0.8rem;
+        margin: 0.3rem auto;
+    }
+    .features .container .box p {
+        font-size: 0.55rem;
+    }
+    .features .container .img-holder img {
+        height: 250px;
+    }
+     .features .container .box:hover .img-holder::after {
+        border-width: 0 9rem 3rem 0;
+    }
+}

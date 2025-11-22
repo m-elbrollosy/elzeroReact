@@ -1,0 +1,167 @@
+.pricing {
+    background-color: var(--alt-bg-color);
+    padding: var(--main-padding);
+}
+.pricing .container .box:hover::after,
+.pricing .container .box:hover::before {
+    width: 100%;
+}
+.pricing .container .box .price span {
+    display: block;
+}
+.pricing .container .popular {
+    position: relative;
+}
+.pricing .container .box {
+    -webkit-box-shadow: 0 0 0.3rem 0.2rem #00000080;
+    box-shadow: 0 0 0.3rem 0.2rem #00000080;
+    background-color: var(--alt-bg-color);
+}
+.pricing .container .box a {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+}
+.pricing .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2.3rem 1fr 2.3rem 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.3rem;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.pricing .container .box::after,
+.pricing .container .box::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    background-color: var(--bg-color);
+    width: 0;
+    z-index: -1;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+.pricing .container .box a:hover,
+.pricing .container .popular .label {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.pricing .container .box::before {
+    top: 0;
+    right: 0;
+}
+.pricing .container .box {
+    position: relative;
+    border: 0.1rem solid #000;
+    text-align: center;
+    border-radius: 0.3rem;
+    z-index: 1;
+    padding: 0.4rem;
+}
+.pricing .container .popular:hover .label::after {
+    border-color: transparent transparent var(--bg-color);
+}
+.pricing .container .popular .label {
+    position: absolute;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+    right: 0.3rem;
+    top: 0;
+    padding: 0.1rem 0.1rem 1rem;
+    margin: 0;
+    width: 1.2rem;
+}
+.pricing .container .popular .label::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    border-width: 0.6rem;
+    border-style: solid;
+    border-color: transparent transparent var(--alt-bg-color);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.pricing .container .box::after {
+    bottom: 0;
+    left: 0;
+}
+.pricing .container .box h3 {
+    margin: 1rem auto;
+    padding: 0.4rem;
+    color: var(--text-color);
+}
+.pricing .container .box i {
+    display: block;
+    color: var(--main-color);
+    padding: 0.2rem;
+    margin-bottom: 1rem;
+}
+.pricing .container .box .price {
+    padding: 0.5rem;
+}
+.pricing .container .box .price .amount {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--main-color);
+}
+.pricing .container .box .price .time {
+    color: var(--alt-text-color);
+    padding-top: 0.5rem;
+    font-size: 0.5rem;
+}
+.pricing .container .box ul {
+    text-align: left;
+}
+.pricing .container .box ul li::before {
+    content: "\f00c";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    color: var(--main-color);
+    margin-right: 0.3rem;
+}
+.pricing .container .box ul li {
+    padding: 0.5rem 0;
+    font-size: 0.7rem;
+    min-width: 250px;
+    color: var(--text-color);
+    border-top: 0.1rem solid #eee;
+}
+.pricing .container .box a {
+    display: block;
+    width: fit-content;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    color: var(--main-color);
+    border: 0.1rem solid var(--main-color);
+    margin: 0.7rem auto;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+    .pricing .container {
+        -ms-grid-columns: 1fr 0.5rem 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+     
+    .pricing .container {
+        gap: 2rem;
+    }
+}
+@media screen and (max-width: 660px) {
+    .pricing .container {
+        width: 60%;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 1024px) {
+    
+    .pricing .container .popular {
+        top: -0.5rem;
+    }
+}
